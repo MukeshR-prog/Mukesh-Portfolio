@@ -49,7 +49,7 @@ const aboutSections = [
 export function About() {
   return (
     <SectionBackground>
-      <section id="about">
+      <section id="about" className="pt-16">
         <div className="container mx-auto px-6">
           <SectionTitle subtitle="Passionate developer building innovative solutions and solving real-world problems.">About Me</SectionTitle>
 

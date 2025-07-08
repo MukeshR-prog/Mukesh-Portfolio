@@ -1,4 +1,4 @@
-import React from "react";
+
 import Slider from "react-slick";
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
@@ -55,7 +55,7 @@ export function Certifications() {
   };
 
   return (<SectionBackground>
-    <section id="certifications">
+    <section id="certifications" className="pt-16">
       <div className="container mx-auto px-8">
         <SectionTitle subtitle="Credentials that back up the skills I apply in real-world scenarios.">Certifications</SectionTitle>
         <Slider {...settings} className="max-w-6xl mx-auto">

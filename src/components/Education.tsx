@@ -5,28 +5,28 @@ import { EducationCard } from './ui/EducationCard';
 const education = [
   {
     degree: 'B.Tech in Computer Science Engineering',
-    institution: 'St. Andrews Institute of Technology and Management, Gurgaon',
-    period: '2022 - 2026',
-    score: '80%',
+    institution: 'Bannari Amman Institute of Technology (BIT), Sathyamangalam, Erode',
+    period: '2023 - 2027',
+    score: '8.37',
   },
   {
     degree: 'Senior Secondary (XII)',
-    institution: 'Inter Science College, Hazaribagh',
-    period: '2019 - 2021',
-    score: '88%',
+    institution: 'Kongu Vellalar Matriculation Higher Secondary School, Tirpur',
+    period: '2022 - 2023',
+    score: '90.5%',
   },
   {
     degree: 'Secondary (X)',
-    institution: "St. Paul's School, Hazaribagh",
-    period: '2017 - 2019',
-    score: '85.6%',
+    institution: "Kongu Vellalar Matriculation Higher Secondary School, Tirpur",
+    period: '2020 - 2021',
+    score: '90%',
   },
 ];
 
 export function Education() {
   return (
     <SectionBackground>
-      <section id="education">
+      <section id="education" className="pt-16">
         <div className="container mx-auto px-8">
           <SectionTitle subtitle="A solid academic foundation fueling my passion for tech innovation.">Education</SectionTitle>
           <div className="max-w-5xl mx-auto space-y-10">

@@ -40,7 +40,7 @@ const skills = [
 export function Skills() {
   return (
     <SectionBackground>
-      <section id="skills">
+      <section id="skills" className="pt-16">
         <div className="container mx-auto px-6">
           <SectionTitle subtitle="A modern tech stack designed for impact, efficiency, and scale.">Skills</SectionTitle>
 

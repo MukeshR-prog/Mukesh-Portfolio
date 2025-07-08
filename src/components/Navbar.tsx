@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { Link } from './Link';
 import { useTheme } from '../hooks/useTheme';
@@ -47,8 +47,6 @@ export function Navbar() {
     { href: '#projects', label: 'Projects' },
     { href: '#github', label: 'GitHub' },
     { href: '#leetcode', label: 'Leetcode' },
-    { href: '#badges', label: 'Badges' },
-    { href: '#blogs', label: 'Blogs' },
     { href: '#experience', label: 'Experience' },
     { href: '#certifications', label: 'Certifications' },
     { href: '#education', label: 'Education' },

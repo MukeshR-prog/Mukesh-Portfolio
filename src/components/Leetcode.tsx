@@ -5,7 +5,7 @@ import { SiLeetcode } from "react-icons/si";
 export function Leetcode() {
   return (
     <SectionBackground>
-      <section id="leetcode">
+      <section id="leetcode" className="pt-16">
         <div className="container mx-auto max-w-6xl px-8">
           <SectionTitle subtitle="DSA isn't just practice — it's how I sharpen problem-solving daily.">Leetcode Progress</SectionTitle>
 
@@ -13,7 +13,7 @@ export function Leetcode() {
             {/* Leetcode Activity Image */}
             <div className="relative w-full h-[18rem] md:h-[25rem] overflow-hidden">
               <img
-                src="https://leetcard.jacoblin.cool/deepakmodi1?theme=dark&font=Inter&ext=activity&border=2&radius=10"
+                src="https://leetcard.jacoblin.cool/mukesh1855?theme=dark&font=Inter&ext=activity&border=2&radius=10"
                 title="Leetcode Activity"
                 className="absolute w-full h-full rounded-xl shadow-md"
               >
@@ -41,7 +41,7 @@ export function Leetcode() {
               {/* LeetCode Profile Button */}
               <div className="mt-6 flex justify-center">
                 <a
-                  href="https://leetcode.com/deepakmodi1/"
+                  href="https://leetcode.com/mukesh1855/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 hover:scale-105 transition-all"
