@@ -11,13 +11,13 @@ const education = [
   },
   {
     degree: 'Senior Secondary (XII)',
-    institution: 'Kongu Vellalar Matriculation Higher Secondary School, Tirpur',
+    institution: 'Kongu Vellalar Matriculation Higher Secondary School, Tirupur',
     period: '2022 - 2023',
     score: '90.5%',
   },
   {
     degree: 'Secondary (X)',
-    institution: "Kongu Vellalar Matriculation Higher Secondary School, Tirpur",
+    institution: "Kongu Vellalar Matriculation Higher Secondary School, Tirupur",
     period: '2020 - 2021',
     score: '90%',
   },
