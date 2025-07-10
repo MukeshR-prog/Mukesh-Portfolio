@@ -26,7 +26,7 @@ export function ContactForm() {
     setErrorMessage('');
 
     try {
-      const response = await fetch('https://formspree.io/f/mvggvyar', {
+      const response = await fetch('https://formspree.io/f/xkgbdnbk', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -40,9 +40,11 @@ export function ContactForm() {
         setErrorMessage(errorData.error || 'Something went wrong. Please try again.');
         setStatus('error');
       }
-    } catch (error) {
+    } catch (error:unknown) {
       setErrorMessage('An unexpected error occurred. Please try again.');
       setStatus('error');
+      console.log('Error submitting form:', error);
+      
     }
   };
 

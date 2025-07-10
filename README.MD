@@ -31,7 +31,7 @@ Welcome to **My Portfolio**! This is my personal portfolio for showcasing my ski
 
 ## 📂 **Directory Structure**
 ```
-└── decodewithdeepak-portfolio/
+└── mukesh-portfolio/
     ├── README.MD
     ├── eslint.config.js
     ├── index.html

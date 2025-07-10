@@ -2,11 +2,12 @@ import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { ContactForm } from './ui/ContactForm';
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { BsWhatsapp } from 'react-icons/bs';
 
 export function Contact() {
   return (
     <SectionBackground>
-      <section id="contact">
+      <section id="contact" className="pt-16">
         <div className="container mx-auto px-4">
           <SectionTitle subtitle="Let's collaborate on your next big idea — I'm just a message away.">Get In Touch</SectionTitle>
 
@@ -20,29 +21,38 @@ export function Contact() {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:deepakmodidev@gmail.com"
+                  href="mailto:mukeshr1855@gmail.com"
                   className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   <Mail className="w-6 h-6" />
-                  <span>deepakmodidev@gmail.com</span>
+                  <span>mukeshr1855@gmail.com</span>
                 </a>
                 <a
-                  href="https://github.com/decodewithdeepak"
+                  href="https://github.com/MukeshR-prog"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   <Github className="w-6 h-6" />
-                  <span>github.com/decodewithdeepak</span>
+                  <span>github.com/MukeshR-prog</span>
                 </a>
                 <a
-                  href="https://linkedin.com/in/deepakmodi1"
+                  href="https://linkedin.com/in/mukesh-r-189b8a28b"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   <Linkedin className="w-6 h-6" />
-                  <span>linkedin.com/in/deepakmodi1</span>
+                  <span>linkedin.com/in/mukesh-r-189b8a28b</span>
+                </a>
+                <a
+                  href="https://wa.me/916381952282"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  <BsWhatsapp className="w-6 h-6" />
+                  <span>Mukesh R</span>
                 </a>
               </div>
             </div>
