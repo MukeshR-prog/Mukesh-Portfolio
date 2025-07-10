@@ -1,10 +1,11 @@
-
+import { useState } from "react";
 import Slider from "react-slick";
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
 import { CertificationCard } from "./ui/CertificationCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const certifications = [
   {
@@ -72,7 +73,10 @@ const certifications = [
   },
 ];
 
+// ...existing imports...
+
 export function Certifications() {
+  const [showAll, setShowAll] = useState(false);
   const settings = {
     dots: true,
     infinite: true,
@@ -82,26 +86,115 @@ export function Certifications() {
     autoplay: true,
     autoplaySpeed: 1500,
     pauseOnHover: true,
-
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
   };
 
-  return (<SectionBackground>
-    <section id="certifications" className="pt-16">
-      <div className="container mx-auto px-8">
-        <SectionTitle subtitle="Credentials that back up the skills I apply in real-world scenarios.">Certifications</SectionTitle>
-        <Slider {...settings} className="max-w-6xl mx-auto">
-          {certifications.map((cert) => (
-            <div key={cert.title} className="px-4">
-              <CertificationCard {...cert} />
-            </div>
-          ))}
-        </Slider>
+  return (
+    <SectionBackground>
+      <section id="certifications" className="pt-16">
+        <div className="container mx-auto px-8">
+          <SectionTitle subtitle="Credentials that back up the skills I apply in real-world scenarios.">
+            Certifications
+          </SectionTitle>
+
+          {/* Toggle Button */}
+          <div className="text-center mb-8">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="flex items-center gap-2 mx-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+            >
+              <span>{showAll ? "View Less" : "View All"}</span>
+              {showAll ? (
+                <ChevronUp className="w-5 h-5" />
+              ) : (
+                <ChevronDown className="w-5 h-5" />
+              )}
+            </button>
+          </div>
+
+          {/* Conditional Rendering */}
+          {showAll ? (
+            // Grid View with Custom Scroll
+           <div className="w-full max-w-7xl mx-auto">
+    <div 
+      className="
+        overflow-y-auto 
+        max-h-[350px] 
+        px-2 py-4
+        custom-scrollbar
+      "
+      style={{
+        scrollbarWidth: 'thin',
+        scrollbarColor: '#2563eb #e5e7eb'
+      }}
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">
+        {certifications.map((cert) => (
+          <CertificationCard key={cert.title} {...cert} />
+        ))}
       </div>
-    </section>
-  </SectionBackground>
+    </div>
+  </div>
+          ) : (
+            // Slider View - Show Limited Certificates
+            <Slider {...settings} className="max-w-6xl mx-auto">
+              {certifications.map((cert) => (
+                <div key={cert.title} className="px-4">
+                  <CertificationCard {...cert} />
+                </div>
+              ))}
+            </Slider>
+          )}
+        </div>
+      </section>
+      
+      {/* Custom Scrollbar Styles */}
+      <style>{`
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: #f1f5f9;
+          border-radius: 10px;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+          border-radius: 10px;
+          border: 2px solid #f1f5f9;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: linear-gradient(135deg, #1d4ed8, #1e40af);
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar-corner {
+          background: #f1f5f9;
+        }
+        
+        /* Dark mode styles */
+        .dark .custom-scrollbar::-webkit-scrollbar-track {
+          background: #374151;
+        }
+        
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: linear-gradient(135deg, #60a5fa, #3b82f6);
+          border-color: #374151;
+        }
+        
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+        
+        .dark .custom-scrollbar::-webkit-scrollbar-corner {
+          background: #374151;
+        }
+      `}</style>
+    </SectionBackground>
   );
 }

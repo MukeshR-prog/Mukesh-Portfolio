@@ -18,7 +18,7 @@ const skills = [
   { name: "Node.js", icon: FaNodeJs, color: "#68a063", url: "https://nodejs.org/" },
   { name: "Express.js", icon: SiExpress, color: "#68a063", url: "https://expressjs.com/" },
   { name: "MUI", icon: SiMui, color: "0582ff", url: "https://mui.com/" },
-  { name: "HeroUI", icon: SiNextui, color: "ffffff", url: "https://heroui.com/" },
+  { name: "HeroUI", icon: SiNextui, color: "#", url: "https://heroui.com/" },
   // { name: "GraphQL", icon: SiGraphql, color: "#e535ab", url: "https://graphql.org/" },
   { name: "MongoDB", icon: SiMongodb, color: "#47a248", url: "https://www.mongodb.com/" },
   { name: "MySql", icon: SiMysql, color: "004b5e", url: "https://www.mysql.com/" },
