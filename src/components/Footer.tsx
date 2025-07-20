@@ -64,13 +64,7 @@ export function Footer() {
 
           {/* Views Counter */}
           <div className="flex justify-center">
-            <a href="https://hits.sh/deepakmodi.tech/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://hits.sh/deepakmodi.tech.svg?style=for-the-badge&label=Views&color=2a6acf&labelColor=1f2937"
-                alt="Views"
-                className="rounded-lg"
-              />
-            </a>
+            <a href="https://hits.sh/github.com/MukeshR-prog/Mukesh-Portfolio/"><img alt="views" src="https://hits.sh/github.com/MukeshR-prog/Mukesh-Portfolio.svg"/></a>
           </div>
 
         </div>

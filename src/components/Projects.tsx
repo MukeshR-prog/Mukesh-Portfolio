@@ -34,19 +34,19 @@ const techStacks = {
   appwrite: { icon: SiAppwrite, name: "Appwrite", color: '#ff3d00' },
 };
 
-// Define projects data
 const projects = [
   {
-    title: 'NotesNeo',
-    description: 'A notes sharing platform for university students with subject-wise notes, authentication, and personalised user dashboard to manage uploaded content.',
+    title: 'Chatter Box',
+    description: 'Chatter Box is a modern, real-time messaging platform designed for seamless and intelligent communication. Built with React, Node.js, Socket.IO, and MongoDB, Chatter Box enables users to engage in instant messaging, send emoji reactions, and explore a smooth chatroom experience with support for attachments and real-time updates.',
     image: '/assets/notesneo.webp',
-    link: 'https://notesneo.vercel.app',
-    github: 'https://github.com/decodewithdeepak/notesneo',
+    link: 'https://chat-app-01-seven.vercel.app/',
+    github: 'https://github.com/MukeshR-prog/chatApp',
     techStack: [
       techStacks.react,
       techStacks.tailwind,
-      techStacks.typescript,
-      techStacks.firebase,
+      techStacks.node,
+      techStacks.socket,
+      techStacks.mongodb, 
     ],
   },
   {
