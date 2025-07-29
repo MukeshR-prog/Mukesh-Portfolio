@@ -28,7 +28,7 @@ export function ProjectCard({ title, description, image, link, github, techStack
             <img
               src={image}
               alt={`Screenshot of ${title}`}
-              className="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+              className="w-full h-[180px] object-fit rounded-lg transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
             />
           </a>
         </div>

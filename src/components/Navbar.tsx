@@ -60,11 +60,10 @@ export function Navbar() {
                     ${isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md outline outline-1 outline-blue-600' : 'bg-transparent'}`}
       >
         <div className="flex items-center justify-between h-12 px-4">
-          {/* Logo */}
-          <div className="cursor-pointer" onClick={handleLogoClick}>
-            <img src="/assets/favicon.png" alt="Logo" className="h-8 w-auto" />
-          </div>
-
+        
+          <p className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient" onClick={handleLogoClick}>
+                Mukesh R
+              </p>
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-5 items-center relative">
             {navLinks.map((link) => (
