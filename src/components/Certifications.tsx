@@ -16,6 +16,27 @@ const certifications = [
     image: "/assets/certificates/Tata-crucible-2024.png",
   },
   {
+    title: "Crayon'd Internship certificate",
+    issuer: "Crayon'd",
+    date: "Sep 2024 - Apr-2025",
+    link: "https://drive.google.com/file/d/13MZELH-Otolx8xGtA__7qgut5xP2IiDd/view?usp=sharing",
+    image: "/assets/certificates/Crayon'd-internship.png",
+  },
+  {
+    title: "Agentic AI Day Hackathon 2025",
+    issuer: "Google Cloud",
+    date: "Jul-2025",
+    link: "https://drive.google.com/file/d/1Ogd1Vy-Gno55meQeTAfzpOsdV-XANBZr/view?usp=sharing",
+    image: "/assets/certificates/Agentic-AI-Day-Hackathon-2025.png",
+  },
+  {
+    title: "ISRO Bharatiya Antariksh Hackathon 2025",
+    issuer: "ISRO",
+    date: "Jul-2025",
+    link: "https://drive.google.com/file/d/1Ogd1Vy-Gno55meQeTAfzpOsdV-XANBZr/view?usp=sharing",
+    image: "/assets/certificates/ISRO-Bharatiya-Antariksh-Hackathon-2025.png",
+  },
+  {
     title: "Codequezt # 19 Coding Challenge",
     issuer: "Naukri Campus.",
     date: "May 2025",
