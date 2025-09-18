@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { letterPaths } from "./svgPaths";
 
@@ -13,7 +13,7 @@ export function HandwritingAnimation() {
       className="w-full h-screen flex items-center justify-center bg-white dark:bg-gray-950"
     >
       <svg
-        viewBox="0 0 1158.6 200.001"
+        viewBox="0 0 1158.6 300.001"
         className="max-w-full max-h-full ml-16 md:ml-48" // Added responsive margin-left
       >
         {letterPaths.map((letter, index) => (
