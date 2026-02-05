@@ -37,13 +37,13 @@ export function Contact() {
                   <span>github.com/MukeshR-prog</span>
                 </a>
                 <a
-                  href="https://linkedin.com/in/mukesh-r-189b8a28b"
+                  href="https://linkedin.com/in/mukesh1855"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   <Linkedin className="w-6 h-6" />
-                  <span>linkedin.com/in/mukesh-r-189b8a28b</span>
+                  <span>linkedin.com/in/mukesh1855</span>
                 </a>
                 <a
                   href="https://wa.me/916381952282"
