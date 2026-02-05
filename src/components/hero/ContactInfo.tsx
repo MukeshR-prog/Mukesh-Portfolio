@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 interface ContactItemProps {
   icon: React.ReactNode;
@@ -12,10 +12,10 @@ function ContactItem({ icon, text, href }: ContactItemProps) {
   return (
     <Component
       href={href}
-      className={`flex items-center gap-2 px-4 py-1 ${href ? 'hover:scale-105' : ''} transition-transform duration-200`}
+      className={`inline-flex items-center gap-2 text-sm ${href ? 'hover:text-blue-600 dark:hover:text-blue-400' : ''} transition-colors duration-200`}
     >
-      <span className="text-blue-600 dark:text-blue-400">{icon}</span>
-      <span className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+      <span className="text-gray-400 dark:text-gray-500">{icon}</span>
+      <span className="text-gray-600 dark:text-gray-400">
         {text}
       </span>
     </Component>
@@ -24,20 +24,15 @@ function ContactItem({ icon, text, href }: ContactItemProps) {
 
 export function ContactInfo() {
   return (
-    <div className="flex flex-col items-center gap-0">
+    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-sm border-t border-gray-200 dark:border-gray-800 pt-4">
       <ContactItem
-        icon={<Phone className="w-5 h-5" />}
-        text="+91 6381952282"
-        href="tel:+916381952282"
-      />
-      <ContactItem
-        icon={<Mail className="w-5 h-5" />}
+        icon={<Mail className="w-4 h-4" />}
         text="mukeshr1855@gmail.com"
         href="mailto:mukeshr1855@gmail.com"
       />
       <ContactItem
-        icon={<MapPin className="w-5 h-5" />}
-        text="Tirupur , Tamil Nadu , India"
+        icon={<MapPin className="w-4 h-4" />}
+        text="Tamil Nadu, India"
       /> 
     </div>
   );
