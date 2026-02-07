@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Code2, Cpu, Layers, Database } from 'lucide-react';
 import { Link } from './Link';
 import { TypeWriter } from './ui/TypeWriter';
