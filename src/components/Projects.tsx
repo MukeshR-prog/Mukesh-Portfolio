@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { SectionTitle } from './ui/SectionTitle';
 import { SectionBackground } from './ui/SectionBackground';
 import { ProjectCard } from './ui/ProjectCard';
+import { CaseStudyModal, CaseStudyData } from './ui/CaseStudyModal';
 import {
   SiReact,
   SiNodedotjs,
@@ -35,13 +37,24 @@ const techStacks = {
   appwrite: { icon: SiAppwrite, name: "Appwrite", color: '#ff3d00' },
 };
 
-const projects = [
+const projects: CaseStudyData[] = [
   {
     title: 'Chatter Box',
     description: 'Chatter Box is a modern, real-time messaging platform designed for seamless and intelligent communication. Built with React, Node.js, Socket.IO, and MongoDB, Chatter Box enables users to engage in instant messaging, send emoji reactions, and explore a smooth chatroom experience with support for attachments and real-time updates.',
+    detailedDescription: 'Chatter Box is a comprehensive real-time messaging platform that redefines how users communicate online. The application leverages WebSocket technology through Socket.IO to deliver instantaneous message delivery, typing indicators, and online presence tracking. With a focus on user experience, the platform features a modern, responsive interface that works seamlessly across all devices.',
     image: '/assets/notesneo.webp',
     link: 'https://chatterbox11.vercel.app/',
     github: 'https://github.com/MukeshR-prog/chatApp',
+    problem: 'Traditional messaging apps often suffer from delayed message delivery, poor real-time synchronization, and lack of engagement features. Users need a platform that provides instant communication with rich interaction capabilities while maintaining a clean, intuitive interface.',
+    solution: 'Built a WebSocket-powered messaging platform using Socket.IO that ensures real-time message delivery with sub-second latency. Implemented emoji reactions, typing indicators, and online presence tracking to enhance user engagement. The MongoDB backend provides efficient message storage and retrieval with proper indexing.',
+    features: [
+      'Real-time messaging with Socket.IO',
+      'Emoji reactions and rich text support',
+      'Typing indicators and online status',
+      'File and attachment sharing',
+      'Responsive design for all devices',
+      'User authentication and profiles',
+    ],
     techStack: [
       techStacks.react,
       techStacks.tailwind,
@@ -50,12 +63,69 @@ const projects = [
       techStacks.mongodb, 
     ],
   },
+  // {
+  //   title: 'Card Smart',
+  //   description: 'Card Smart is a smart card management system that allows users to create, manage, and share BDAG. Built with Next.js and Firebase, Card Smart offers a user-friendly interface for designing and customizing cards, as well as features connecting with others. Metamask integration enables secure transactions and interactions within the platform.',
+  //   detailedDescription: 'Card Smart is an innovative blockchain-powered card management system that merges traditional card design with Web3 capabilities. The platform enables users to create personalized digital cards, manage their collections, and connect with others through a decentralized network. With Metamask integration, users can securely conduct transactions and verify ownership of their digital assets.',
+  //   image: '/assets/card-smart.png',
+  //   link: 'https://card-smart.vercel.app/',
+  //   github: 'https://github.com/MukeshR-prog/block-dag-2025',
+  //   problem: 'Digital card creation and management platforms lack proper ownership verification and secure transaction capabilities. Users need a trustworthy system to create, share, and trade digital cards while ensuring authenticity and preventing fraud.',
+  //   solution: 'Developed a Web3-enabled card management platform integrating Metamask for secure wallet connections and transaction signing. Firebase provides real-time data synchronization and user authentication, while Next.js ensures optimal performance with server-side rendering.',
+  //   features: [
+  //     'Custom card design and creation',
+  //     'Metamask wallet integration',
+  //     'Secure blockchain transactions',
+  //     'Real-time synchronization',
+  //     'User profiles and collections',
+  //     'Social sharing capabilities',
+  //   ],
+  //   techStack: [
+  //     techStacks.next,
+  //     techStacks.tailwind,
+  //     techStacks.firebase,
+  //   ],
+  // },
+  // {
+  //   title: 'Card Smart',
+  //   description: 'Card Smart is a smart card management system that allows users to create, manage, and share BDAG. Built with Next.js and Firebase, Card Smart offers a user-friendly interface for designing and customizing cards, as well as features connecting with others. Metamask integration enables secure transactions and interactions within the platform.',
+  //   detailedDescription: 'Card Smart is an innovative blockchain-powered card management system that merges traditional card design with Web3 capabilities. The platform enables users to create personalized digital cards, manage their collections, and connect with others through a decentralized network. With Metamask integration, users can securely conduct transactions and verify ownership of their digital assets.',
+  //   image: '/assets/card-smart.png',
+  //   link: 'https://card-smart.vercel.app/',
+  //   github: 'https://github.com/MukeshR-prog/block-dag-2025',
+  //   problem: 'Digital card creation and management platforms lack proper ownership verification and secure transaction capabilities. Users need a trustworthy system to create, share, and trade digital cards while ensuring authenticity and preventing fraud.',
+  //   solution: 'Developed a Web3-enabled card management platform integrating Metamask for secure wallet connections and transaction signing. Firebase provides real-time data synchronization and user authentication, while Next.js ensures optimal performance with server-side rendering.',
+  //   features: [
+  //     'Custom card design and creation',
+  //     'Metamask wallet integration',
+  //     'Secure blockchain transactions',
+  //     'Real-time synchronization',
+  //     'User profiles and collections',
+  //     'Social sharing capabilities',
+  //   ],
+  //   techStack: [
+  //     techStacks.next,
+  //     techStacks.tailwind,
+  //     techStacks.firebase,
+  //   ],
+  // },
   {
     title: 'Card Smart',
     description: 'Card Smart is a smart card management system that allows users to create, manage, and share BDAG. Built with Next.js and Firebase, Card Smart offers a user-friendly interface for designing and customizing cards, as well as features connecting with others. Metamask integration enables secure transactions and interactions within the platform.',
+    detailedDescription: 'Card Smart is an innovative blockchain-powered card management system that merges traditional card design with Web3 capabilities. The platform enables users to create personalized digital cards, manage their collections, and connect with others through a decentralized network. With Metamask integration, users can securely conduct transactions and verify ownership of their digital assets.',
     image: '/assets/card-smart.png',
     link: 'https://card-smart.vercel.app/',
     github: 'https://github.com/MukeshR-prog/block-dag-2025',
+    problem: 'Digital card creation and management platforms lack proper ownership verification and secure transaction capabilities. Users need a trustworthy system to create, share, and trade digital cards while ensuring authenticity and preventing fraud.',
+    solution: 'Developed a Web3-enabled card management platform integrating Metamask for secure wallet connections and transaction signing. Firebase provides real-time data synchronization and user authentication, while Next.js ensures optimal performance with server-side rendering.',
+    features: [
+      'Custom card design and creation',
+      'Metamask wallet integration',
+      'Secure blockchain transactions',
+      'Real-time synchronization',
+      'User profiles and collections',
+      'Social sharing capabilities',
+    ],
     techStack: [
       techStacks.next,
       techStacks.tailwind,
@@ -175,6 +245,34 @@ const projects = [
 ];
 
 export function Projects() {
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openCaseStudy = (index: number) => {
+    setSelectedProject(index);
+    setIsModalOpen(true);
+  };
+
+  const closeCaseStudy = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedProject(null), 300);
+  };
+
+  const nextProject = () => {
+    if (selectedProject !== null && selectedProject < projects.length - 1) {
+      setSelectedProject(selectedProject + 1);
+    }
+  };
+
+  const prevProject = () => {
+    if (selectedProject !== null && selectedProject > 0) {
+      setSelectedProject(selectedProject - 1);
+    }
+  };
+
+  // Duplicate projects for seamless infinite scroll
+  const duplicatedProjects = [...projects, ...projects];
+
   return (<SectionBackground>
     <section id="projects" className="pt-16 relative overflow-hidden">
       {/* Premium gradient background */}
@@ -341,13 +439,45 @@ export function Projects() {
       <div className="container mx-auto px-8 relative z-10">
         <SectionTitle subtitle="Every project, a product. Every product, a solution with a story.">Projects</SectionTitle>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-2 gap-8 lg:px-24">  { /* remove lg px and change grid to three */}
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
-          ))}
+        {/* Smooth Horizontal Slider */}
+        <div 
+          className="relative overflow-hidden py-8 group/slider"
+        >
+          {/* Gradient Fade Edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-10 pointer-events-none" />
+          
+          <div
+            className="flex gap-8 animate-scroll-left group-hover/slider:[animation-play-state:paused]"
+            style={{ width: 'fit-content' }}
+          >
+            {duplicatedProjects.map((project, index) => (
+              <div 
+                key={`${project.title}-${index}`} 
+                className="flex-shrink-0 w-[400px]"
+              >
+                <ProjectCard 
+                  {...project} 
+                  hasCaseStudy={true}
+                  onCaseStudyClick={() => openCaseStudy(index % projects.length)}
+                />
+              </div>
+            ))}
+          </div>
         </div>
         
       </div>
+
+      {/* Case Study Modal */}
+      <CaseStudyModal
+        isOpen={isModalOpen}
+        onClose={closeCaseStudy}
+        project={selectedProject !== null ? projects[selectedProject] : null}
+        onNext={nextProject}
+        onPrev={prevProject}
+        hasNext={selectedProject !== null && selectedProject < projects.length - 1}
+        hasPrev={selectedProject !== null && selectedProject > 0}
+      />
     </section>
   </SectionBackground>
   );

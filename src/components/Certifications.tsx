@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Slider from "react-slick";
 import { SectionTitle } from "./ui/SectionTitle";
 import { SectionBackground } from "./ui/SectionBackground";
 import { CertificationCard } from "./ui/CertificationCard";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const certifications = [
@@ -99,20 +96,9 @@ const certifications = [
 
 export function Certifications() {
   const [showAll, setShowAll] = useState(false);
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    pauseOnHover: true,
-    responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 1 } },
-    ],
-  };
+  
+  // Duplicate certifications for seamless infinite scroll
+  const duplicatedCerts = [...certifications, ...certifications];
 
   return (
     <SectionBackground>
@@ -275,14 +261,25 @@ export function Certifications() {
     </div>
   </div>
           ) : (
-            // Slider View - Show Limited Certificates
-            <Slider {...settings} className="max-w-6xl mx-auto">
-              {certifications.map((cert) => (
-                <div key={cert.title} className="px-4">
-                  <CertificationCard {...cert} />
-                </div>
-              ))}
-            </Slider>
+            // Smooth Horizontal Slider
+            <div 
+              className="relative overflow-hidden py-4 group/slider"
+            >
+              {/* Gradient Fade Edges */}
+              <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-10 pointer-events-none" />
+              
+              <div
+                className="flex gap-6 animate-scroll-left-slow group-hover/slider:[animation-play-state:paused]"
+                style={{ width: 'fit-content' }}
+              >
+                {duplicatedCerts.map((cert, index) => (
+                  <div key={`${cert.title}-${index}`} className="flex-shrink-0 w-[350px]">
+                    <CertificationCard {...cert} />
+                  </div>
+                ))}
+              </div>
+            </div>
           )}
         </div>
       </section>
