@@ -80,6 +80,33 @@
   100% { transform: rotate(0deg); }
 }
 
+/* Infinite scroll carousel animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-left-slow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 60s linear infinite;
+}
+
+.animate-scroll-left-slow {
+  animation: scroll-left-slow 80s linear infinite;
+}
+
 .animate-floating {
   @apply motion-safe:animate-[floating_4s_ease-in-out_infinite];
 }
