@@ -1,4 +1,4 @@
-# Mukesh R - Portfolio Website for a Full Stack Developer
+# Mukesh R - Portfolio Website
 
 Welcome to **My Portfolio**! This is my personal portfolio for showcasing my skills, projects, experience, education, certifications, and more. It’s built using React, TypeScript, Tailwind CSS, and other modern web technologies. It fetches data from various APIs to display the latest information, such as GitHub repositories and LeetCode submissions. The portfolio is responsive, interactive, and optimized for performance.
 
