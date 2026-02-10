@@ -5,7 +5,7 @@ import { About } from './components/About';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { GitHub } from './components/GitHub';
-import { Leetcode } from './components/Leetcode';
+// import { Leetcode } from './components/Leetcode';
 import { Experience } from './components/Experience';
 import { Certifications } from './components/Certifications';
 import { Education } from './components/Education';
@@ -31,7 +31,7 @@ function App() {
         <Skills />
         <Projects />
         <GitHub />
-        <Leetcode />
+        {/* <Leetcode /> */}
         <Experience />
         <Certifications />
         <Education />
