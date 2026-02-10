@@ -270,8 +270,8 @@ export function Projects() {
     }
   };
 
-  // Duplicate projects for seamless infinite scroll
-  const duplicatedProjects = [...projects, ...projects];
+  // Triple projects for seamless infinite scroll (3 copies = translate 33.33%)
+  const duplicatedProjects = [...projects, ...projects, ...projects];
 
   return (<SectionBackground>
     <section id="projects" className="pt-16 relative overflow-hidden">
