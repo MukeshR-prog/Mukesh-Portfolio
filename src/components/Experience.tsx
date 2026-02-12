@@ -9,7 +9,7 @@ const experiences = [
     title: "Full Stack Developer Intern",
     company: "Crayon'd",
     companyLink: "https://www.crayond.com/",
-    period: "Sep 2024 - Apr 2025  &  Jul 2025 - Present",
+    period: "Sep 2024 - Apr 2025",
     description: `Developed and maintained dynamic web applications using the MERN stack for seamless user experience. 
     Designed and developed a real-time interactive dashboard that significantly increased user engagement by 40%. 
     Implemented responsive web design principles, ensuring an optimal mobile-friendly user experience.`,
