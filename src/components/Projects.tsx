@@ -18,7 +18,11 @@ import {
   SiSocketdotio,
   SiStripe,
   SiAppwrite,
+  SiOpenai,
+  SiVercel,
+  SiExpress,
 } from 'react-icons/si';
+
 
 // Define reusable tech stack icons & colors
 const techStacks = {
@@ -27,15 +31,19 @@ const techStacks = {
   firebase: { icon: SiFirebase, name: "Firebase", color: '#fbbf00' },
   tailwind: { icon: SiTailwindcss, name: "Tailwind CSS", color: '#06b6d4' },
   typescript: { icon: SiTypescript, name: "TypeScript", color: '#1f6feb' },
-  next: { icon: SiNextdotjs, name: "Next.js", color: '#' },
+  next: { icon: SiNextdotjs, name: "Next.js", color: '#000000' },
   mongodb: { icon: SiMongodb, name: "MongoDB", color: '#10b981' },
   prisma: { icon: SiPrisma, name: "Prisma", color: '#186997' },
-  shadcn: { icon: SiShadcnui, name: "ShadCN", color: '#6366f1' },
+  shadcn: { icon: SiShadcnui, name: "ShadCN UI", color: '#6366f1' },
   framer: { icon: SiFramer, name: "Framer Motion", color: '#2563eb' },
-  socket: { icon: SiSocketdotio, name: "Socket.io", color: '#' },
+  socket: { icon: SiSocketdotio, name: "Socket.io", color: '#000000' },
   stripe: { icon: SiStripe, name: "Stripe", color: '#5b4df1' },
   appwrite: { icon: SiAppwrite, name: "Appwrite", color: '#ff3d00' },
+  openai: { icon: SiOpenai, name: "OpenAI", color: '#10a37f' },
+  vercel: { icon: SiVercel, name: "Vercel", color: '#000000' },
+  express: { icon: SiExpress, name: "Express.js", color: '#444444' },
 };
+
 
 const projects: CaseStudyData[] = [
   {
@@ -63,6 +71,44 @@ const projects: CaseStudyData[] = [
       techStacks.mongodb, 
     ],
   },
+  {
+  title: 'MindMock',
+  description: 'TheMindMock is an AI-powered career preparation platform that helps job seekers optimize their resumes and simulate realistic interviews. Built with Next.js, MongoDB, and AI integration, it provides ATS scoring, personalized interview questions, voice-based mock interviews, and detailed performance analytics.',
+  
+  detailedDescription: 'TheMindMock is a full-stack AI-driven career coaching platform designed to bridge the gap between resume preparation and real-world interview performance. The platform analyzes uploaded resumes against job descriptions using a Universal ATS Engine that supports multiple domains such as Web Development, AI/ML, Cloud, and System Architecture. It dynamically generates interview questions based on the user’s resume, selected role, and experience level, and evaluates responses using AI-powered scoring. With voice interaction, real-time transcript tracking, structured feedback reports, and performance analytics dashboards, TheMindMock simulates a realistic HR and technical interview experience while providing actionable improvement insights.',
+  
+  image: '/assets/mindmock.png',
+  
+  link: 'https://mindmock.vercel.app/',
+  github: 'https://github.com/MukeshR-prog/mindmock',
+  
+  problem: 'Many job seekers struggle with resume optimization and interview preparation due to lack of structured feedback and realistic practice environments. Traditional mock interviews are static, generic, and do not adapt to individual resumes, roles, or experience levels. Additionally, most resume checkers rely on basic keyword matching without domain-aware intelligence.',
+  
+  solution: 'Developed an AI-powered career platform that combines a Universal ATS Scoring Engine with dynamic, resume-based interview simulation. Implemented intelligent keyword and role detection to generate personalized interview questions. Integrated voice-based answering with real-time transcript tracking and AI evaluation for structured feedback, confidence scoring, and skill-gap identification. The platform tracks interview performance over time using analytics dashboards to help users measure growth and readiness.',
+  
+  features: [
+    'Universal ATS scoring for multiple domains (Web, AI, Cloud, ML, etc.)',
+    'Resume vs Job Description intelligent matching',
+    'AI-generated role-based interview questions',
+    'Voice-based mock interview with speech recognition',
+    'Real-time transcript and answer evaluation',
+    'STAR-method based behavioral analysis',
+    'Performance analytics with skill radar charts',
+    'Interview history tracking and feedback reports',
+    'Email & Google authentication with Firebase',
+    'Modern SaaS-style UI built with HeroUI & Tailwind CSS',
+  ],
+  
+  techStack: [
+    techStacks.next,
+    techStacks.tailwind,
+    techStacks.node,
+    techStacks.mongodb,
+    techStacks.firebase,
+    techStacks.openai,
+  ],
+},
+
   // {
   //   title: 'Card Smart',
   //   description: 'Card Smart is a smart card management system that allows users to create, manage, and share BDAG. Built with Next.js and Firebase, Card Smart offers a user-friendly interface for designing and customizing cards, as well as features connecting with others. Metamask integration enables secure transactions and interactions within the platform.',
