@@ -5,10 +5,10 @@ import { EducationCard } from './ui/EducationCard';
 
 const education = [
   {
-    degree: 'B.Tech in Computer Science Engineering',
+    degree: 'B.E in Computer Science Engineering',
     institution: 'Bannari Amman Institute of Technology (BIT), Sathyamangalam, Erode',
     period: '2023 - 2027',
-    score: '8.37',
+    score: '8.29 - upto 5th sem',
   },
   {
     degree: 'Senior Secondary (XII)',
