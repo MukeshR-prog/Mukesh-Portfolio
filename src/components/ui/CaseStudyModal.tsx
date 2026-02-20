@@ -161,11 +161,11 @@ export function CaseStudyModal({
             </button>
 
             {/* Header Image Slider */}
-            <div className="relative h-48 sm:h-64 md:h-72 overflow-hidden rounded-t-2xl">
+            <div className="relative h-48 sm:h-64 md:h-80 overflow-hidden rounded-t-2xl">
               <img
                 src={allImages[currentImageIndex] || project.image}
                 alt={project.title}
-                className="w-full h-full object-cover transition-all duration-300"
+                className="w-full h-full transition-all duration-300"
               />
               
               {/* Image Slider Controls */}
