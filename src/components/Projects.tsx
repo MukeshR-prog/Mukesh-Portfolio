@@ -21,6 +21,8 @@ import {
   SiOpenai,
   SiVercel,
   SiExpress,
+  SiJsonwebtokens,
+  SiDocker,
 } from 'react-icons/si';
 
 
@@ -42,6 +44,8 @@ const techStacks = {
   openai: { icon: SiOpenai, name: "OpenAI", color: '#10a37f' },
   vercel: { icon: SiVercel, name: "Vercel", color: '#000000' },
   express: { icon: SiExpress, name: "Express.js", color: '#444444' },
+  jwt: { icon: SiJsonwebtokens, name: "JWT", color: "#000000" },
+  docker: { icon: SiDocker, name: "Docker", color: "#2496ED" },
 };
 
 
@@ -50,7 +54,7 @@ const projects: CaseStudyData[] = [
     title: 'Chatter Box',
     description: 'Chatter Box is a modern, real-time messaging platform designed for seamless and intelligent communication. Built with React, Node.js, Socket.IO, and MongoDB, Chatter Box enables users to engage in instant messaging, send emoji reactions, and explore a smooth chatroom experience with support for attachments and real-time updates.',
     detailedDescription: 'Chatter Box is a comprehensive real-time messaging platform that redefines how users communicate online. The application leverages WebSocket technology through Socket.IO to deliver instantaneous message delivery, typing indicators, and online presence tracking. With a focus on user experience, the platform features a modern, responsive interface that works seamlessly across all devices.',
-    image: '/assets/notesneo.webp',
+    image: '/assets/ChatterBox.png',
     link: 'https://chatterbox11.vercel.app/',
     github: 'https://github.com/MukeshR-prog/chatApp',
     problem: 'Traditional messaging apps often suffer from delayed message delivery, poor real-time synchronization, and lack of engagement features. Users need a platform that provides instant communication with rich interaction capabilities while maintaining a clean, intuitive interface.',
@@ -108,7 +112,44 @@ const projects: CaseStudyData[] = [
     techStacks.openai,
   ],
 },
+{
+  title: 'Distributer',
 
+  description: 'A full-stack MERN application designed to intelligently distribute tasks, leads, or records among agents with real-time tracking, performance analytics, and secure role-based workflows.',
+
+  detailedDescription: 'The Distribution Management System is a scalable MERN stack platform built to automate task and lead distribution across multiple agents while providing real-time monitoring and analytics. The system supports secure dual-role authentication (Admin & Agent), intelligent equal distribution algorithms, multi-format file uploads (CSV, XLSX), and live progress tracking. Administrators can upload bulk records, distribute them automatically among active agents, and monitor completion metrics through interactive dashboards. Agents can update task statuses through a structured workflow, enabling transparent tracking, performance analytics, and audit history. The architecture emphasizes secure JWT authentication, role-based access control, rate limiting, file validation, and optimized MongoDB schema design for performance and scalability.',
+
+  image: '/assets/distribution-system.png',
+
+  link: 'https://distributers-frontend.vercel.app/',
+  github: 'https://github.com/MukeshR-prog/distributer-backend',
+
+  problem: 'Organizations that manage leads or task-based workflows often struggle with manual distribution, uneven workload allocation, lack of transparency, and limited real-time performance tracking. Existing solutions are either overly complex enterprise tools or lack proper automation and analytics.',
+
+  solution: 'Developed a secure MERN stack platform that automates equal task distribution among agents using intelligent allocation logic. Implemented JWT-based role authentication, structured workflow states, real-time dashboard analytics, and multi-format file upload processing. Designed the system with modular architecture, performance-optimized MongoDB schemas, and strict security middleware including rate limiting, validation, and secure password hashing.',
+
+  features: [
+    'Dual-role authentication (Admin & Agent) with JWT security',
+    'Intelligent equal task distribution algorithm',
+    'CSV, XLSX, XLS bulk file upload support',
+    'Real-time dashboard analytics & progress tracking',
+    'Structured task workflow (Pending → In-Progress → Completed/Failed)',
+    'Agent performance metrics & productivity tracking',
+    'Role-based access control & permission management',
+    'Rate limiting & security middleware integration',
+    'Global phone validation with 195+ country codes',
+    'Audit history & distribution tracking system'
+  ],
+
+  techStack: [
+    techStacks.next,
+    techStacks.node,
+    techStacks.express,
+    techStacks.mongodb,
+    techStacks.tailwind,
+    techStacks.jwt,
+  ],
+},
   // {
   //   title: 'Card Smart',
   //   description: 'Card Smart is a smart card management system that allows users to create, manage, and share BDAG. Built with Next.js and Firebase, Card Smart offers a user-friendly interface for designing and customizing cards, as well as features connecting with others. Metamask integration enables secure transactions and interactions within the platform.',

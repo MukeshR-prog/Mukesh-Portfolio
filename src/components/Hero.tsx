@@ -266,8 +266,8 @@ export function Hero() {
                     <Code2 className="w-6 h-6 text-white" />
                   </motion.div>
                   <div className="hidden sm:block pr-1">
-                    <p className="text-sm font-bold text-gray-700 dark:text-gray-200">TypeScript</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">Expert</p>
+                    <p className="text-sm font-bold text-gray-700 dark:text-gray-200">Problem </p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">solver</p>
                   </div>
                 </div>
               </motion.div>
