@@ -8,7 +8,7 @@ const education = [
     degree: 'B.E in Computer Science Engineering',
     institution: 'Bannari Amman Institute of Technology (BIT), Sathyamangalam, Erode',
     period: '2023 - 2027',
-    score: '8.29 - upto 5th sem',
+    score: '8.32 - upto 5th sem',
   },
   {
     degree: 'Senior Secondary (XII)',
