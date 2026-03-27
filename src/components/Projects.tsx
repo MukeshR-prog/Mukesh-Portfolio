@@ -113,6 +113,30 @@ const projects: CaseStudyData[] = [
   ],
 },
 {
+  title: 'CashFlo',
+  description: 'CashFlo is a modern full-stack financial dashboard designed for freelancers and small businesses to manage finances, track analytics, and streamline invoicing and payments.',
+  detailedDescription: 'CashFlo is a comprehensive finance management platform that enables users to track income, expenses, invoices, and cash flow through an interactive dashboard. It combines secure authentication, real-time data handling, and analytics to deliver actionable financial insights. The platform also integrates an AI-powered RAG system using Groq API, allowing users to query financial data in natural language and receive context-aware insights.',
+  image: '/assets/cashflo.png',
+  link: 'https://cashflo-dev.vercel.app/',
+  github: 'https://github.com/MukeshR-prog/cashFlo',
+  problem: 'Freelancers and small businesses often struggle to manage finances across multiple tools, leading to poor visibility into cash flow, delayed payments, and inefficient financial tracking.',
+  solution: 'Developed a unified financial dashboard that consolidates income, expenses, invoices, and client data into a single platform. Integrated secure authentication, real-time database management, and an AI-powered RAG query system to simplify financial analysis and decision-making.',
+  features: [
+    'Secure authentication with session-based login',
+    'Interactive financial dashboard with analytics',
+    'Client and invoice management system',
+    'Expense tracking and categorization',
+    'Payment tracking and automated reminders',
+    'AI-powered RAG financial query system',
+  ],
+  techStack: [
+    techStacks.next,
+    techStacks.tailwind,
+    techStacks.mongodb,
+    techStacks.firebase,
+  ],
+},
+{
   title: 'Distributer',
 
   description: 'A full-stack MERN application designed to intelligently distribute tasks, leads, or records among agents with real-time tracking, performance analytics, and secure role-based workflows.',
