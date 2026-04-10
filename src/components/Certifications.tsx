@@ -90,6 +90,20 @@ const certifications = [
     link: "https://drive.google.com/file/d/109sW3mxdln2dqjawT3GsDDs8KwA2MYep/view?usp=sharing",
     image: "/assets/certificates/NIT-Tirchy-pitchStorm.png",
   },
+  {
+    title: "Fastathon 26 Hackathon",
+    issuer: "SRM-Kattankulathur",
+    date: "Mar 2026",
+    link: "https://drive.google.com/file/d/1TaHL4kyzuq4a7NBNqKFwAPlFu-IvCPGM/view?usp=sharing",
+    image: "/assets/certificates/Fastathon-26.jpg",
+  },
+  {
+    title: "National AI/ML Hackathon by Vivriti Capital of YUVAAN",
+    issuer: "IIT-Hyderabad",
+    date: "Mar 2026",
+    link: "https://drive.google.com/file/d/1pTiOa1ZkfZh6cJIifSHDjhtNmmwikG9b/view?usp=sharing",
+    image: "/assets/certificates/national-aiml-hackathon.jpg",
+  },
 ];
 
 // ...existing imports...
